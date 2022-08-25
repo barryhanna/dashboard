@@ -7,6 +7,18 @@
   --clr-neutral-400: #6e6e6e;
   --clr-neutral-800: #141414;
 
+  --clr-nav-bg: var(--clr-primary);
+  --clr-nav: #fff;
+
+  --clr-button-bg: var(--clr-primary);
+
+  --clr-project-border: var(--clr-secondary);
+  --clr-projects-bg: var(--clr-neutral-200);
+
+  --clr-heading: var(--clr-neutral-800);
+
+  --outer-gutter: 1.25rem;
+
   --shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -48,6 +60,9 @@ body {
   text-rendering: optimizeSpeed;
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
+
+  display: grid;
+  grid-template-columns: 20% 1fr;
 }
 
 /* A elements that don't have a class get default styles */
@@ -84,4 +99,52 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--outer-gutter);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  background-color: var(--clr-projects-bg);
+  display: grid;
+  grid-template-columns: 70% 30%;
+  padding: var(--outer-gutter);
+  height: 100%;
+}
+
+button {
+  color: #fff;
+  background-color: var(--clr-button-bg);
+  border: none;
+  font-family: inherit;
+  padding: 0.5em 1.5em;
+  border-radius: 25px;
+}
+
+.nav-col {
+  color: #fff;
+  background-color: var(--clr-nav-bg);
+  padding: var(--outer-gutter);
+}
+
+.nav-col ul {
+  padding-left: 0;
+}
+
+.nav-col a {
+  color: white;
+  text-decoration: none;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
 }
