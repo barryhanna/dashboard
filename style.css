@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root {
+  --clr-primary: #1992d4;
+  --clr-secondary: #f0b429;
+  --clr-neutral-200: #e2e8f0;
+  --clr-neutral-400: #6e6e6e;
+  --clr-neutral-800: #141414;
+
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 /* Box sizing rules */
 *,
 *::before,
